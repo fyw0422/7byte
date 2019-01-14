@@ -1,0 +1,79 @@
+{% extends 'shibei_admin/extends_correlation/import_extends.html' %}
+{% load static %}
+
+{% block importContent %}
+<body>
+<article class="page-container">
+	<form class="form form-horizontal" id="partnerAdd">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>公司名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="companyName" name="companyName">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">公司LOGO：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+				<span class="btn-upload form-group">
+                    <input class="input-text upload-url" type="text" name="uploadfile-2" id="uploadfile-2" readonly style="width:200px">
+                    <a href="javascript:void(0);" class="btn btn-primary upload-btn">
+                        <i class="Hui-iconfont">&#xe642;</i> 上传logo
+                    </a>
+                    <input type="file" multiple name="file-2" class="input-file">
+                </span>
+                <p>若不存在LOGO，则使用系统默认LOGO</p>
+
+			</div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>公司简介：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <textarea name="companyDescription" cols="" rows="" class="textarea"  placeholder="" style="height: 100px;"></textarea>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+	</form>
+</article>
+{% endblock %}
+
+{% block importJs %}
+<script type="text/javascript">
+$(function(){
+	$("#partnerAdd").validate({
+		rules:{
+			companyName:{
+				required:true,
+				minlength:2,
+				maxlength:16
+			},
+			companyDescription:{
+			    minlength:20,
+				required:true
+			}
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+			$(form).ajaxSubmit({
+				type: 'post',
+				url: "xxxxxxx" ,
+				success: function(data){
+					layer.msg('添加成功!',{icon:1,time:1000});
+				},
+                error: function(XmlHttpRequest, textStatus, errorThrown){
+					layer.msg('error!',{icon:1,time:1000});
+				}
+			});
+			var index = parent.layer.getFrameIndex(window.name);
+			parent.layer.close(index);
+		}
+	});
+});
+</script>
+{% endblock %}
+</body>

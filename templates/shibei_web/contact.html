@@ -1,0 +1,56 @@
+{% extends "shibei_web/bases.html" %}
+{% load static %}
+<html>
+<body>
+{%block same %}
+<div class="contact wthree-3">
+	<div class="container">
+        <h2 class="tittle">关于</h2>
+        <div class="col-md-12 content-pro-head content-pro-head3 agile-6">
+            <h4>公司简介</h4>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成都拾贝科技有限公司成立于2015年，注册资金200万，是一家探索创新的
+                <span style="color: #EFA52C;">研发型企业</span>，企业主要从事大数据应用平台及物联网应用研发、应用、培训技术推广；
+                基于大数据研发行业信息综合应用平台、信息系统集成平台，解决现代企业数据爆发式增长带来的采集、存取、应用的问题；
+                对大数据进行高效处理、深度应用直接服务于企业的经营管理；同时为用户信息化建设和运行提供相关产品、服务和综合解决方案。
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司不断学习和探索大数据及物联网技术与行业应用的结合并将长期坚持行业深度应用的研发及推广，
+                依托大数据技术逐步形成成熟的行业应用解决方案。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司汇聚了一批水平高、业务精、事业心强的高素质人才，团队具有设计、
+                组织、实施大中型信息系统的集成能力和经验。已为公安、医疗保险、城市管理、电信行业等众多专业行业领域提供了信息化产品、
+                服务和完整的综合平台解决方案。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司经过不断的创新和实践，结合行业的特点研发的研发型企业研发型企业
+                <span style="color: #EFA52C;">《一体化城市综合管理平台（ICMP）》</span>、
+                <span style="color: #EFA52C;">《公安交警道路交通事故预防研判平台（TAPP）》</span>、
+                <span style="color: #EFA52C;">《社会综合治理平台（RSCC）》</span>、
+                <span style="color: #EFA52C;">动车故障应急指挥平台（TEC）</span>、
+                <span style="color: #EFA52C;">医保医师管理系统</span>、等平台及系统都得到了很好的应用及客户的好评。
+            </p>
+            <h4>公司地址、联系方式</h4>
+            <ul class="contact-list agileits-6">
+                <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>四川省成都市郫县金融中心（望丛中路景尚景商业街29号）</li>
+                <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:example@mail.com">wavexiang@163.com</a></li>
+                <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>向衢波&nbsp;：&nbsp;186&nbsp;-&nbsp;0284&nbsp;-&nbsp;5683</li>
+            </ul>
+        </div>
+        <div class="col-md-12 content-pro-head1 w3agile-6">
+            <a href="http://map.baidu.com/?newmap=1&s=con%26wd%3D%E9%83%AB%E5%8E%BF%E9%87%91%E8%9E%8D%E4%B8%AD%E5%BF%83%26c%3D75&from=alamap&tpl=mapdots">
+                <img src="../../static/shibei_web/images/1.png" alt="">
+            </a>
+        </div>
+	    <div class="clearfix"> </div>
+	</div>
+    <div class="footer-bottom agileits-w3layouts-1">
+    <div class="container">
+        <h3>意见反馈</h3>
+        <p class="ttt">非常感谢您为我们留下宝贵的建议！请正确填写您的电话号码，和电子邮件地址，我们将在看到留言的第一时间与您联系！</p>
+        <form action="#" method="post">
+            <input type="text" value="建议" name="services" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'services';}" required="">
+            <input type="text" value="公司" name="Company" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Company';}" required="">
+            <input type="text" value="姓名" name="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+            <input type="text" value="电话" name="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" required=""><br><br>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}
+</body>
+</html>

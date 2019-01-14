@@ -1,0 +1,126 @@
+{% extends "shibei_web/base-services6.html" %}
+{% load static %}
+<html>
+<body>
+{%block same %}
+<img src="" alt="">
+<div class="w3l-1">
+    <div class="container">
+        <h3 class="text-center">产品概述</h3><br>        
+        <div class="col-md-12 services-grid" style="margin-bottom:30px;">
+                <div class="col-md-6 serv-img mask">
+                    <img src="{% static 'shibei_web/images/services6.1.jpg' %}" alt="" class="img-responsive zoom-img">
+                </div>
+                <div class="col-md-6 serv-text">
+                    <h4 style="font-size:27px;color:#EFA52C;text-align:left;margin:0 0 1em;font-weight:lighter;">能解决哪些问题？</h4>
+                    <p style="padding-top:20px;"><span style="color: red;font-weight:bold">人员离职</span>造成文档资料的流失！
+                    <span style="color: red;font-weight:bold">资料分散</span>在员工电脑，<span style="color: red;font-weight:bold">团队文档碎片化</span>，无法系统管理。
+                    <span style="color: red;font-weight:bold">需统一管理</span>，提高文档资料的使用效率，规范管理，避免重复造轮子，浪费时间。
+                    系统提供<span style="color: red;font-weight:bold">学习资料</span>，提供学习效率，降低培训成本。
+                    针对海量文档内容<span style="color: red;font-weight:bold">快速搜索</span>，提供生产效率。
+                    <span style="color: red;font-weight:bold">碎片闪念记录。</span></p>
+                </div>
+                <div class="clearfix"> </div>
+        </div>
+    </div>            
+<div class="container">
+    <h3 class="text-center" style="margin-bottom:60px;margin-top:60px;">系统功能及特点</h3>
+    <!-- <p class="ttt">when an unknown printer took a galley of type and scrambled Lorem Ipsum passages, and more recently it to make a type specimen book.</p> -->
+    <div class="col-md-12 centered w3l-1-left">
+        <div class="col-md-3 serv-img mask">
+            <h4>海量文档库管理</h4>
+            <p>公共库/私有库</p>
+            <p>无限极目录</p>
+            <p>文档摘要</p>
+            <p>查看/下载统计</p>
+        </div>
+        <div class="col-md-3 serv-img mask">
+            <h4>高性能搜索引擎</h4>
+            <p>文档自动搜索</p>
+            <p>文档自动分词分析</p>
+            <p>支持大多数文档类型</p>
+            <p>热词自动学习</p>
+        </div>
+        <div class="col-md-3 serv-img mask">
+            <h4>常用管理</h4>
+            <p>公告发布</p>
+            <p>常用链接管理</p>
+            <p>闪念笔记管理</p>
+            <p>系统日志管理</p>
+        </div>
+        <div class="col-md-3 serv-img mask">
+            <h4>系统对接</h4>
+            <p>完备的API接口</p>
+            <p>支持OA接入</p>
+        </div>
+    </div>
+</div>
+<div class="agileinfo">
+    <div class="container">
+        <h3>产品截图</h3>
+        <div class="flexslider-info">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <div class="banner-info">
+                                <div class="col-md-12 agileinfo-left">
+                                    <img src="{% static 'shibei_web/images/services6.2.jpg' %}" alt="">
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-info">
+                                <div class="col-md-12 agileinfo-left">
+                                    <img src="{% static 'shibei_web/images/services6.3.jpg' %}" alt="">
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-info">
+                                <div class="col-md-12 agileinfo-left">
+                                    <img src="{% static 'shibei_web/images/services6.4.jpg' %}" alt="">
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+<link rel="stylesheet" href="{% static 'shibei_web/css/flexslider.css' %}" type="text/css" media="screen" />
+<script defer src="{% static 'shibei_web/js/jquery.flexslider.js' %}"></script>
+<script type="text/javascript">
+$(window).load(function(){
+  $('.flexslider').flexslider({
+    animation: "slide",
+    start: function(slider){
+      $('body').removeClass('loading');
+    }
+  });
+});
+</script>
+
+<script src="{% static 'shibei_web/js/easyResponsiveTabs.js' %}" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true   // 100% fit in a container
+        });
+    });
+</script>
+{% endblock %}
+
+</body>
+</html>

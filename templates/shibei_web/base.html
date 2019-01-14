@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>成都拾贝科技</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link rel="stylesheet" href="{% static 'shibei_web/css/bootstrap.min.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'shibei_web/css/style.css' %}" type="text/css" media="all">
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" 	type="text/css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+
+<script type="text/javascript" src="{% static 'shibei_web/js/jquery-2.1.4.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'shibei_web/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'shibei_web/js/responsiveslides.min.js' %}"></script>
+<script>
+    $(function () {
+        $("#slider").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: true,
+            speed: 1000,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+    });
+</script>
+</head>
+<body>
+	<div class="header w3layouts-1">
+        <div class="top-bar w3-1">
+            <div class="container">
+                <div class="header-nav w3-agileits-1">
+                    <nav class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <h1><a class="navbar-brand" href="{% url 'shibei_web:index' %}">成都拾贝科技</a></h1>
+                        </div>
+                        <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav ">
+                                <li><a href="{% url 'shibei_web:index' %}">首页</a></li>
+                                <li><a href="{% url 'shibei_web:gallery' %}">产品</a></li>
+                                <li><a href="{% url 'shibei_web:codes' %}">动态</a></li>
+                                <li><a href="{% url 'shibei_web:about' %}">招商代理</a></li>
+                                <li><a href="{% url 'shibei_web:contact' %}">关于</a></li>
+                            </ul>
+                            <div class="search-box">
+                                <div id="sb-search" class="sb-search">
+                                </div>
+                            </div>
+                        </div>
+
+                        <script src="{% static 'shibei_web/js/classie.js' %}"></script>
+                        <script src="{% static 'shibei_web/js/uisearch.js' %}"></script>
+                        <script>
+                            new UISearch( document.getElementById( 'sb-search' ) );
+                        </script>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+		<div class="slider">
+			<div class="callbacks_container">
+				<ul class="rslides" id="slider">
+					<li>
+						<div class="slider-img">
+							<img src="{% static 'shibei_web/images/slide-1.jpg' %}" class="img-responsive" alt="Manufactory">
+						</div>
+						<div class="slider-info w3ls-1">
+							<h3>站在你的角度做系统，不是累赘，是好助手</h3>
+							<!-- <div class="underline"></div> -->
+							<!-- <p>首页轮播图h标签</p> -->
+							
+						</div>
+					</li>
+					<li>
+						<div class="slider-img">
+							<img src="{% static 'shibei_web/images/slide-2.jpg' %}" class="img-responsive" alt="Manufactory">
+						</div>
+						<div class="slider-info">
+							<h3>完备的业务管理能力</h3>
+							<!-- <div class="underline"></div> -->
+							<!-- <p>首页轮播图h标签</p> -->
+						</div>
+					</li>
+					<li>
+						<div class="slider-img">
+							<img src="{% static 'shibei_web/images/slide-3.jpg' %}" class="img-responsive" alt="Manufactory">
+						</div>
+						<div class="slider-info w3ls-1">
+							<h3>充分信息共建共享</h3>
+							<!-- <div class="underline"></div> -->
+							<!-- <p>首页轮播图h标签</p> -->
+							
+						</div>
+					</li>
+					<li>
+						<div class="slider-img">
+							<img src="{% static 'shibei_web/images/slide-4.jpg' %}" class="img-responsive" alt="Manufactory">
+						</div>
+						<div class="slider-info w3ls-1">
+							<h3>细粒度系统安全控制</h3>
+							<!-- <div class="underline"></div> -->
+							<!-- <p>首页轮播图h标签</p> -->
+						</div>
+					</li>
+
+					<li>
+						<div class="slider-img">
+							<img src="{% static 'shibei_web/images/slide-5.jpg' %}" class="img-responsive" alt="Manufactory">
+						</div>
+						<div class="slider-info w3ls-1">
+							<h3>极致用户体验</h3>
+							<!-- <div class="underline"></div> -->
+							<!-- <p>首页轮播图h标签</p> -->
+						</div>
+					</li>
+				</ul>
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	{%block same %}
+	{% endblock %}
+
+<div class="footer w3-agile-1">
+	<div class="container">
+		<ul class="fb_icons2 agile-1">
+			<li><a class="fb" href="#"></a></li>
+			<li><a class="twit" href="#"></a></li>
+			<li><a class="goog" href="#"></a></li>
+			<li><a class="pin" href="#"></a></li>
+			<li><a class="drib" href="#"></a></li>
+		</ul>
+	</div>
+	<p class="copyright">Copyright &copy; 2017.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+</div>
+{% block js %}
+{% endblock %}
+
+</body>
+</html>

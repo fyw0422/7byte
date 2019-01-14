@@ -1,0 +1,105 @@
+{% extends "shibei_web/bases.html" %}
+{% load static %}
+<html>
+<body>
+{% block same %}
+<div class="services wthree-3">
+    <div class="container">
+        <h2 class="tittle">产&nbsp;品</h2>
+        <div class="services-grids">
+            <div class="col-md-12 services-grid">
+                <div class="col-md-5 serv-img mask">
+                    <img src="{% static 'shibei_web/images/i1.jpg' %}" alt="" class="img-responsive zoom-img">
+                </div>
+                <div class="col-md-7 serv-text">
+                    <a href="{% url 'shibei_web:services1' %}"><h4 style="color: #EFA52C;"> 公安集成资源管理平台（IPRP）</h4></a><br><br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公安交警集成警务资源管理平台（IPRP）
+                        是基于GIS立足于公安交警勤务工作管理整合公安交警多个平台数据结合警务实战管理要求进行综合应用的资源集成综合管理系统平台，同时也是警务工作管理的门户。
+                        平台整合公安交警现有的指挥平台、综合业务平台、布控平台、接处警平台等其他外挂系统，统一对数据资源进行采集、加工、分析处理为指挥调度和决策提供数据资源支撑；
+                        借鉴企业ERP理念结合公安交警警务实际提供人员组织、文件收发、值班考勤、GIS责任区域、证据及隐患采集、接处警、布控、任务管理、资产装备管理、门户管理、
+                        大数据分析等众多功能配合移动APP为勤务管理和勤务工作考核提供了强大的信息化管理手段；平台通过集成的手段提供统一的入口。</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="col-md-12 services-grid">
+                <div class="col-md-5 serv-img mask">
+                    <img src="{% static 'shibei_web/images/i2.jpg' %}" alt="" class="img-responsive zoom-img">
+                </div>
+                <div class="col-md-7 serv-text">
+                    <a href="{% url 'shibei_web:services2' %}"><h4 style="color: #EFA52C;">公安社会综合治理管理平台（RSCC）</h4></a><br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;社会综合治理数字化平台是基于"互联网+"的信息化平台。
+                        以管理创新为导向，以云计算、大数据、物联网、移动互联网等新一代IT信息技术为手段，整合辖区各部门在开展社会治理、应急指挥、综治网格、治安管理和防范、
+                        平安城市以及维护社会和谐稳定等工作中所需的信息资源，形成大综治、网格化的工作格局，快速应对各类社会治理和城市管理问题，
+                        完成社会综合治理工作相关的"人、事、地、物、情、组织"等要素的采集、存储、分析、统计、决策和展示，提升公共管理和为人民服务水平，
+                        实现社会综合治理的高效化和精细化。</p>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="services-grids">
+            <div class="col-md-12 services-grid">
+                <div class="col-md-5 serv-img mask">
+                    <img src="{% static 'shibei_web/images/i3.jpg' %}" alt="" class="img-responsive zoom-img">
+                </div>
+                <div class="col-md-7 serv-text">
+                    <a href="{% url 'shibei_web:services3' %}"><h4 style="color: #EFA52C;">极智医保医师信息管理系统</h4></a><br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一套利民医疗保险服务公众查询与社会监督的平台</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一套医保管理部门监管及规范医保机构及医保医师行为的工作业务平台</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一套公众查询服务与医保服务监督管理的系统解决方案</p>
+                </div>
+              <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-12 services-grid">
+                <div class="col-md-5 serv-img mask">
+                    <img src="{% static 'shibei_web/images/i4.jpg' %}" alt="" class="img-responsive zoom-img">
+                </div>
+                <div class="col-md-7 serv-text">
+                    <a href="{% url 'shibei_web:services4' %}"><h4 style="color: #EFA52C;">动车应急指挥系统</h4></a><br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;动车应急指挥电子沙盘是为动车段员工量身定做的一款软件，旨在提高日常工作效率。<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;动车段应急指挥电子沙盘帮助工作人员高效处理当前动车故障，对每个故障的详细信息，
+                        处置流程、处置结果和处置评价做详细记录，是每一个动车段高效工作者必备的日常工作软件。</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>            
+        </div>
+        <div class="services-grids">
+            <div class="col-md-12 services-grid">
+                <div class="col-md-5 serv-img mask">
+                    <img src="{% static 'shibei_web/images/i5.jpg' %}" alt="" class="img-responsive zoom-img">
+                </div>
+                <div class="col-md-7 serv-text">
+                    <a href="{% url 'shibei_web:services5' %}"><h4 style="color: #EFA52C;">展板盒子（BBOX）</h4></a><br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,sedeiusmod tempor incididunt .</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-12 services-grid">
+                <div class="col-md-5 serv-img mask">
+                    <img src="{% static 'shibei_web/images/i6.jpg' %}" alt="" class="img-responsive zoom-img">
+                </div>
+                <div class="col-md-7 serv-text">
+                    <a href="{% url 'shibei_web:services6' %}"><h4 style="color: #EFA52C;">拾贝知识库管理（知识库&nbsp;？？？）</h4></a><br>
+                    <p style="color:#19b4d7;">团队&nbsp;/&nbsp;集体智慧汇聚的文件、资料、想法、闪念库&nbsp;！！！</p><br>
+                    <p style="color:#f1c232;">单位&nbsp;/&nbsp;企业内部的知识库&nbsp;！！！</p><br>
+                    <p style="color:#00ff00;">单位&nbsp;/&nbsp;企业内部共建共享的资料库&nbsp;！！！</p><br>
+                    <p style="color:#ff5500;">单位&nbsp;/&nbsp;企业内部学习的资源库&nbsp;！！！</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>            
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
+
+<div class="col-md-12 services-grid">
+    <div class="col-md-5 serv-img mask">
+        <img src="{% static 'shibei_web/images/i5.jpg' %}" alt="" class="img-responsive zoom-img">
+    </div>
+    <div class="col-md-7 serv-text">
+        <a href="{% url 'shibei_web:services' %}"><h4>展板盒子（BBOX）</h4></a><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,sedeiusmod tempor incididunt .</p>
+    </div>
+    <div class="clearfix"> </div>
+</div>

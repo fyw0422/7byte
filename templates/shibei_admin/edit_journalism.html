@@ -1,0 +1,64 @@
+{% extends 'shibei_admin/extends_correlation/import_extends.html' %}
+{% load static %}
+
+{% block importContent %}
+<body>
+<article class="page-container">
+	<form class="form form-horizontal" id="journalismAdd">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>新闻标题：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="在北京，真的很快节奏" placeholder="" id="journalismTitle" name="journalismTitle">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>新闻内容：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <textarea name="journalismContent" cols="" rows="" class="textarea"  placeholder="" style="height: 150px;">虽然大城市，看起来车水马龙</textarea>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+	</form>
+</article>
+{% endblock %}
+
+{% block importJs %}
+<script type="text/javascript">
+$(function(){
+	$("#journalismAdd").validate({
+		rules:{
+			journalismTitle:{
+				required:true,
+				minlength:4,
+				maxlength:16
+			},
+			journalismContent:{
+				required:true
+			}
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+			$(form).ajaxSubmit({
+				type: 'post',
+				url: "xxxxxxx" ,
+				success: function(data){
+					layer.msg('添加成功!',{icon:1,time:1000});
+				},
+                error: function(XmlHttpRequest, textStatus, errorThrown){
+					layer.msg('error!',{icon:1,time:1000});
+				}
+			});
+			var index = parent.layer.getFrameIndex(window.name);
+			parent.layer.close(index);
+		}
+	});
+});
+</script>
+{% endblock %}
+</body>
